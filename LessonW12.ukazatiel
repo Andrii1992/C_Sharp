@@ -1,0 +1,55 @@
+using System;
+
+namespace Lesson16.Ukazatel
+{
+	class animals 
+	{
+		       string name;
+		       int    age;
+		       char   sex;
+		static int    count = 0;
+		public animals()
+		{
+			name = "Tes";
+			age  = 3;
+			sex  = 'm';
+
+			count++;
+			print();
+		}
+		public animals(string name,int age,char sex)
+		{ 
+		    
+     
+			this.name = name;
+			this.age  = age;
+			this.sex  = sex;
+
+			 count++;
+			 print();
+
+		}
+		void print()
+		{
+			Console.WriteLine("Name is " + name);
+			Console.WriteLine("Age  is " + age);
+			Console.WriteLine("Sex  is " + sex);
+			Console.WriteLine();
+			Console.WriteLine("Count   " + count);
+			Console.WriteLine();
+		}
+
+
+	}
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+			Console.WriteLine();
+			animals cat = new animals("Chak", 4, 'm');
+			animals dog = new animals();
+
+			Console.ReadKey();
+		}
+	}
+}
