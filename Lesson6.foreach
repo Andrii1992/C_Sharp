@@ -1,0 +1,25 @@
+using System;
+
+namespace lessen6
+{
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+
+
+
+			float[] numbers = { 23.3f, 456f, 54.4f };
+			foreach (float ga in numbers) {
+				Console.WriteLine(ga);
+			}
+			Console.WriteLine("Hello World!");
+
+
+
+
+
+			Console.ReadKey();
+		}
+	}
+}
