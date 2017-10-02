@@ -1,0 +1,29 @@
+using System;
+
+namespace lesen12
+{
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+			string str =  "Totenchem,Arsenal,Chelsa";
+			// Console.WriteLine(string.IsNullOrWhiteSpace(str)); // есть ли то правда пустое ли пробели таб не вк
+			// Console.WriteLine(string.Compare("a", "b")); // сравнение
+			// Console.WriteLine(str.Contains("llo")); есть ли оно в переменнной true false
+			// Console.WriteLine(str.StartsWith("He")); начинается ли з етого  true false
+			// Console.WriteLine(str.EndsWith("lo")); заканчиваеться ли на  true false
+			// Console.WriteLine(str.Insert(1, "Kowabangaaaaaa")); встав с кокого места и что
+			// Console.WriteLine(str.Remove(3)); обрезать с
+			// Console.WriteLine(str.Replace("Hel","A")); заменить что и на что
+            // char[] sys = str.ToCharArray(); в масив
+            // string str =  "Totenchem,Arsenal,Chelsa"; string[] clubs = str.Split(','); делит на слова
+			Console.WriteLine(clubs[2]);
+
+
+			// str.ToLower(), str.ToUpper() нижний верхний регистр
+
+
+			Console.ReadKey();
+		}
+	}
+}
