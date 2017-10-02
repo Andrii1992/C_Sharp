@@ -1,6 +1,6 @@
 using System;
 
-namespace lesen12
+namespace lesson12
 {
 	class MainClass
 	{
