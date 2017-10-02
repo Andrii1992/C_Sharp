@@ -1,0 +1,29 @@
+using System;
+
+namespace lesen7
+{
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+			Console.WriteLine("Hi");
+			int d = Convert.ToInt32(Console.ReadLine());
+            int c = Convert.ToInt32(Console.ReadLine());
+			mat(d, c);
+			gudzon("Hello World!");
+			Console.ReadKey();
+		}
+		public static void gudzon(string s)
+		{
+			Console.WriteLine(s);
+		}
+		public static void mat(int ab ,int cd) {
+
+			Console.WriteLine("Result is " + (ab + cd));
+		
+		}
+
+
+
+	}
+}
