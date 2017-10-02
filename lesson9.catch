@@ -1,0 +1,43 @@
+using System;
+
+namespace lesson13
+{
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+
+			Console.WriteLine("Enter number :");
+
+			try //зловити
+			{
+
+				int num = Convert.ToInt32(Console.ReadLine());
+				Console.WriteLine("Num is - " + num);
+				int num2 = Convert.ToInt32(Console.ReadLine());
+				Console.WriteLine("Num is - " + num2);
+				Console.WriteLine("Resolt is - " + (num2 / num));
+			}
+			catch (DivideByZeroException)
+			{
+				Console.WriteLine("DivideByZeroExeption");
+			}
+			catch (FormatException)
+			{
+				Console.WriteLine("FormatException");
+			}
+			catch (IndexOutOfRangeException) //- нету в миве t[10] а вбиваем 11
+			{
+				Console.WriteLine("IndexOutOfRangeExeption");
+			}
+			finally  {Console.WriteLine("Finally");}
+			//finally  { } всегда виполниться в конце
+			//catch (IndexOutOfRangeException) //- нету в миве t[10] а вбиваем 11
+			//catch (NotFiniteNumberException) - файл не найден
+			//catch (DivideByZeroException) - деление на ноль
+			//catch (Exception) - все ошибки
+			//catch (FormatException)  - не коректний формат 
+			Console.ReadKey();
+		}
+	}
+}
