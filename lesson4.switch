@@ -1,0 +1,36 @@
+using System;
+
+namespace Lesen4
+{
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+			int num;
+			Random randm = new Random();
+			num = randm.Next(1, 4);
+
+			switch (num)
+			{
+				case 1:
+					Console.WriteLine("Hello World!");
+					break;
+				case 2:
+					Console.WriteLine("GGGGGGGGGGGGGGGG!");
+					break;
+				case 3: Console.WriteLine("!");for (int i = 0; i < 6; i++)
+					{
+						if (i == 3) continue;
+						Console.WriteLine(i.ToString());
+						       }
+					
+					break;
+				default : Console.WriteLine("Nafi");
+					break;
+				
+			}
+			Console.ReadKey();
+
+		}
+	}
+}
