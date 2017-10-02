@@ -1,0 +1,77 @@
+using System;
+
+namespace HomeWorck
+{
+	class student
+	{
+		string name;
+		int    course;
+        bool   scholarship;
+
+		static int count = 0;
+
+		public student(string name, int course, bool scholarship)
+		{
+			this.name = name;
+			this.course = course;
+			this.scholarship = scholarship;
+
+			count++;
+			print();
+
+		}
+		void print()
+		{
+			Console.WriteLine("Name student   " + name);
+			Console.WriteLine("Course         " + course);
+			Console.WriteLine("Scholarship    " + scholarship);
+			Console.WriteLine("Count students " + count);
+		}
+
+
+	}
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+
+			int     x=1;
+			string  name1;
+			int     course1;
+			bool    scholarchip1;
+			char    boolen;
+
+			for (int i = 0; i < x; i++) 
+			{
+				try
+				{
+					Console.WriteLine("Dadaj studenta Imie ");
+					name1 = Console.ReadLine();
+					Console.WriteLine("Dadaj kurs studenta ");
+					course1 = Convert.ToInt32(Console.ReadLine());
+					Console.WriteLine("Dadaj stypendie ");
+					scholarchip1 = Convert.ToBoolean(Console.ReadLine());
+					student studentn = new student(name1, course1, scholarchip1);
+
+				}
+				catch (Exception) { Console.Clear(); Console.WriteLine("Niedobrze!!"); }
+				finally {
+					
+					int y = 1;
+					for (int j = 0; j < y; j++)
+					{
+						try
+						{
+							Console.WriteLine("Pracujemy yeszcze? Y N");
+							boolen = Convert.ToChar(Console.ReadLine());
+							Console.Clear();
+								if (boolen == 'y' || boolen == 'Y') { x++; break; }
+							    if (boolen == 'n' || boolen == 'N') { System.Diagnostics.Process.GetCurrentProcess().Kill(); }
+								else { y++; }
+
+						}
+						catch (Exception) { y++; Console.Clear();}
+					}
+				}
+			
+			}  
