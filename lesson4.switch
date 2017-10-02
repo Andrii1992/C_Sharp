@@ -1,6 +1,6 @@
 using System;
 
-namespace Lesen4
+namespace Lesson4
 {
 	class MainClass
 	{
