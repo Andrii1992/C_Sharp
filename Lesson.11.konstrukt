@@ -1,0 +1,59 @@
+using System;
+
+namespace Lesson15
+{
+	class animal
+	{
+		public static int count = 0; // static можна отделить переменную од класа
+		public	      string name;
+		public        int    age;
+		public        double hapiness;
+
+		public animal()                            // конструктор
+		{
+			name = "Kosia";
+			age = 7;
+			hapiness = 0.5;
+
+
+			count++;
+            print();
+		}
+		public animal (string na, int ag, double ha) // конструктор
+		{
+			name     = na;
+			age      = ag;
+			hapiness = ha;
+
+
+			count++;
+            print();
+		}
+
+		public void print()                                      
+		{
+			Console.WriteLine("Name      " + name);
+			Console.WriteLine("Age       " + age);
+			Console.WriteLine("Hapiness  " + hapiness);
+			Console.WriteLine("Count     " + count + "\n");
+
+		}
+	
+	
+	}
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+			
+			animal cat = new animal("Tomanas", 12, 0.5);
+            animal snake = new animal("Siedy", 2, 0.8);
+			animal dog = new animal();
+
+
+			Console.WriteLine("Count of objects is " + animal.count);
+
+			Console.ReadKey();
+		}
+	}
+}
