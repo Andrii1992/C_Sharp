@@ -10,8 +10,8 @@ namespace lesson2
 			Console.WriteLine("How old are you?");
 			num = Convert.ToDouble(Console.ReadLine());
 			Console.WriteLine(num.ToString());
-			if (num > 23.11) { Console.WriteLine("Krasawczik!!!!!!!!"); }
-			else { Console.WriteLine("TY ШМАРКАЧ"); }
+			if (num > 23.11) { Console.WriteLine("Kl!!!!!!!!"); }
+			else { Console.WriteLine("&12"); }
             string name = num == 15 ? "Tysz" : "Ne15";
             Console.WriteLine(name);
 
