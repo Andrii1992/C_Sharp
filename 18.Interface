@@ -1,0 +1,58 @@
+using System;
+
+namespace Lesson22interface 
+{
+	interface Isomeinterface {
+		int property { get; set; }
+		void print();
+	}
+
+interface IDraw{
+		void hak();
+	}
+	class Test : Isomeinterface,IDraw {
+		public int property { get; set; }
+
+		public void print()
+		{
+			Console.WriteLine(" Hey");
+		}
+		public void hak() { 
+		
+		Console.WriteLine(" HAK");
+		}
+	
+	}
+  class Test2 : Isomeinterface
+   {
+	public int property { get; set; }
+
+	public void print()
+	{
+		Console.WriteLine(" Hey2");
+	}
+
+	}
+
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+			Console.WriteLine("Hello World!");
+			Test test_1 = new Test();
+			Test2 test_2 = new Test2();
+			test_1.property = 19;
+			test_1.print();
+			test_1.hak();
+			Console.WriteLine(test_1.property);
+
+			Console.WriteLine();
+
+			test_2.property = 87;
+			test_2.print();
+			Console.WriteLine(test_2.property);
+
+			Console.ReadKey();
+		}
+	}
+}
