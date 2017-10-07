@@ -1,0 +1,206 @@
+C#
+
+
+
+
+
+-------
+Zad 1
+-------
+
+----
+a)
+----
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication5 {
+    class Program {
+        static void Main(string[] args) {
+            int licz1 = 3,licz2 = 5;
+
+            if (licz1 > licz2) { Console.WriteLine("Biger is " + licz1); }
+            else { Console.WriteLine("Biger is " + licz2); }
+
+            Console.ReadKey();
+        }
+    }
+}
+
+---------
+b)
+---------
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication5 {
+    class Program {
+        static void Main(string[] args) {
+            char zar;
+            char test;
+            int prad = 0;
+
+
+            Console.WriteLine("Czy lampa jest podpiêta? Y / N");
+            zar = Convert.ToChar(Console.ReadLine());
+            if(zar == 'y') { 
+                prad = 1; 
+                Console.WriteLine("Czy sie pali?");
+                test = Convert.ToChar(Console.ReadLine());
+                if(test == 'y'){Console.WriteLine("Lampa sprawna");}
+                else {Console.WriteLine("Lampa nie sprawna");}
+            }
+            
+
+            Console.ReadKey();
+                
+            }
+
+
+           
+
+            
+        }
+    }
+
+
+
+------------
+c)
+------------
+
+using System;
+
+namespace Test4
+{
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+
+		
+
+			Console.WriteLine("Silnia");
+
+			int silnia;
+			int n;
+			n = Convert.ToInt32(Console.ReadLine());
+			if (n <= 1) { Console.WriteLine("Silnia wynosi 1"); }
+			else
+			{
+				silnia = n;
+				for (int i = n-1; i > 0; i--) {
+					silnia *= i;
+				}
+
+				Console.WriteLine("Silnia wynosi " + silnia);
+
+			}
+
+			Console.ReadKey();
+
+		}
+	}
+}
+
+
+----------
+Zad 2 
+----------
+
+
+
+using System;
+
+namespace Test5
+
+{
+
+
+
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+
+			string imie;
+			string nazwisko;
+			string pesel; //(moze byc fikcyjny)
+			string email;
+			int x = 0,y = 0;
+			do
+			{
+				Console.Clear();
+				Console.WriteLine(" Wprowadz Imie  ");
+				imie = Console.ReadLine();
+				if (imie.Length < 3) { Console.WriteLine("Imie nieprawidlowe wprowadzenie danych osobistych \n");x++; continue; }
+				Console.Clear();
+				Console.WriteLine(" Wprowadz Nazwisko ");
+				nazwisko = Console.ReadLine();
+				if (nazwisko.Length < 2) { Console.WriteLine("Nazwisko nieprawidlowe wprowadzenie danych osobistych\n");x++;continue; }
+				Console.Clear();
+				Console.WriteLine(" Wprowadz PESEL ");
+				pesel = Console.ReadLine();
+				if (pesel.Length != 11) { Console.WriteLine("Bledny PESEL \n"); x++;continue;}
+				Console.Clear();
+				Console.WriteLine(" Wprowadz Email \n");
+				email = Console.ReadLine();
+
+				   for (int i = 0; i<email.Length; i++)
+	              {
+					if ((email[i] == '@') | (email[i] == '.')) { y++; }
+                  }
+				if ((y >2) | (y < 2)) {Console.WriteLine("Email not gut\n"); x++;continue; }
+
+				if (x == 0) {
+
+					Console.Clear();
+					Console.WriteLine();
+					Console.WriteLine(imie);
+					Console.WriteLine(nazwisko);
+					Console.WriteLine(pesel);
+					Console.WriteLine(email);
+				}
+			} while (x != 0);
+
+	
+
+
+
+			Console.ReadKey();
+		}
+
+-------------
+Zad 3
+-------------
+
+using System;
+
+namespace Test5
+{
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+			char Sx1='S', Sx2 = 'O';
+			string S3;
+
+			S3 = Convert.ToString(Sx1) + Convert.ToString(Sx2) + Convert.ToString(Sx1) ;
+			Console.WriteLine(S3);
+
+
+			Console.ReadKey();
+		}
+	}
+}
+
+
+
