@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+
+namespace Faile
+{
+	class MainClass
+	{
+static void Main(string[] args)
+{
+			string path = @"C:\WriteLines1.txt";
+            string dad = @"C:\Kol0.txt";
+			string x;
+            string d;
+			int dx = 1;
+
+			 do
+            {
+               
+            x = Convert.ToString(dx);
+				d = Convert.ToString(dx - 1);
+			
+
+				path = path.Replace(d,x);
+				dad = dad.Replace(d, x);
+
+
+				System.IO.StreamWriter file = new System.IO.StreamWriter(path);
+				System.IO.StreamWriter fil = new System.IO.StreamWriter(dad);
+
+
+
+
+				file.Write("1221", path);
+				file.Close();
+
+
+
+
+           dx++;
+            } while (dx != 4);
