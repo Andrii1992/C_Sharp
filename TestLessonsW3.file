@@ -1,0 +1,35 @@
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace FailTest
+{
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+			try
+			{
+
+				StreamReader str = new StreamReader(@"C:\001.txt");
+				string fale = str.ReadLine();
+				while (fale != null)
+				{
+					Console.WriteLine(fale);
+					fale = str.ReadLine();
+
+				}
+
+				str.Close();
+
+				Console.ReadKey();
+			}
+			catch (Exception) { Console.WriteLine("Ekseption"); }
+			finally { Console.WriteLine("Goodbye"); }
+			Console.ReadKey();
+		}
+
+	}
+}
